@@ -1,8 +1,8 @@
 # MX2 Companion
 
-A Mac companion for using the Traktor MX2 with djay Pro. Choose the app for its Native and MIDI bridge modes, or use the separate Direct MIDI mapping without the app.
+A Mac companion for using the Traktor MX2 with djay Pro. Choose the app for its Native and MIDI modes, or run the original MIDI setup from Terminal without the app.
 
-**[Open the website](docs/index.html)** · **[Mac app](docs/downloads/MX2-Companion-0.5.0-macOS-arm64.dmg)** · **[Direct MIDI mapping](docs/downloads/MX2-Direct-MIDI-Mapping-0.5.0.zip)**
+**[Open the website](docs/index.html)** · **[Mac app](docs/downloads/MX2-Companion-0.5.0-macOS-arm64.dmg)** · **[Classic MIDI package](docs/downloads/MX2-Classic-MIDI-0.5.0.zip)**
 
 ## Install the Mac app
 
@@ -13,13 +13,13 @@ A Mac companion for using the Traktor MX2 with djay Pro. Choose the app for its 
 The downloadable app is for Apple silicon Macs.
 This build is not notarized by Apple. If macOS blocks the first launch, follow [Apple's Open Anyway steps](https://support.apple.com/en-ie/102445) after trying to open it.
 
-## Use MIDI without the app
+## Use Classic MIDI without the app
 
-1. Download and unzip the [Direct MIDI package](docs/downloads/MX2-Direct-MIDI-Mapping-0.5.0.zip).
-2. Switch the MX2 to MIDI mode and open `Traktor MX2 - Direct MIDI.djayMidiMapping` in djay.
-3. Select the physical `Traktor MX2` device and the Direct MIDI mapping. Keep Companion and other MX2 bridges stopped.
+1. Download and unzip the [Classic MIDI package](docs/downloads/MX2-Classic-MIDI-0.5.0.zip).
+2. Switch the MX2 to MIDI mode and run `DEMARRER-MX2.command`. Keep its Terminal window open.
+3. Import `Traktor MX2 - Visual Complete.djayMidiMapping` in djay, select the virtual `MX2 for djay` device, and disable djay's direct `Traktor MX2` MIDI input.
 
-The package contains the full setup guide. The 105-action direct configuration has passed file checks but has not yet been tested with the controller and djay. It omits SHIFT layers, alternate pad banks, RGB lights and meters.
+The package contains the original 293-action mapping, MIDI bridge and full setup guide. This is the pre-app configuration previously checked on both decks. The mapping file alone needs the included bridge for SHIFT, pad modes and feedback.
 
 ## Website
 

@@ -6,9 +6,9 @@ const routes = {
     download: 'downloads/MX2-Companion-0.5.0-macOS-arm64.dmg', label: 'Download the Mac app'
   },
   classic: {
-    number: '293', foot: 'Actions in the original MIDI setup', heading: 'The pre-app MIDI setup.',
+    number: '293', foot: 'Actions with the Terminal bridge running', heading: 'The pre-app MIDI setup.',
     copy: 'Use the original Visual Complete mapping with the Terminal MIDI bridge. It creates the MX2 for djay virtual device and handles deck modes, SHIFT, pad banks and feedback.',
-    points: ['Launcher: DEMARRER-MX2.command', 'Virtual device: MX2 for djay', 'Mapping: Traktor MX2 - Visual Complete', 'Keep the Terminal window open while mixing'],
+    points: ['Launcher: DEMARRER-MX2.command', 'Virtual device: MX2 for djay', 'Mapping: Traktor MX2 - Visual Complete', 'Terminal must stay open; the mapping is not standalone'],
     download: 'downloads/MX2-Classic-MIDI-0.5.0.zip', label: 'Download Classic MIDI'
   }
 };

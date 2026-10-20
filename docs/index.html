@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101317">
-  <meta name="description" content="Use the Traktor MX2 with djay Pro on Mac. Install MX2 Companion or run the original MIDI setup without the app.">
+  <meta name="description" content="Use the Traktor MX2 with djay Pro on Mac through MX2 Companion or the original Terminal MIDI bridge. A standalone mapping is not available in this release.">
   <title>MX2 Companion — Traktor MX2 for djay Pro</title>
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="site.css">
@@ -32,10 +32,10 @@
     </div>
 
     <section id="choose" class="choice-section" aria-labelledby="choose-title">
-      <div class="section-intro"><h2 id="choose-title">Pick a route.</h2><p>Both use the MX2 with djay Pro. Companion offers a guided window; Classic MIDI restores the working pre-app setup.</p></div>
+      <div class="section-intro"><h2 id="choose-title">Pick a route.</h2><p>Companion offers a guided window. Classic MIDI uses the original Terminal bridge. Neither download is a standalone djay mapping.</p></div>
       <div class="route-picker" role="group" aria-label="Connection route">
         <button type="button" class="route-button selected" data-route="companion" aria-pressed="true"><span>Companion</span><small>Native or MIDI · full controls</small></button>
-        <button type="button" class="route-button" data-route="classic" aria-pressed="false"><span>Classic MIDI</span><small>Original bridge · no app</small></button>
+        <button type="button" class="route-button" data-route="classic" aria-pressed="false"><span>Classic MIDI</span><small>Original bridge · Terminal required</small></button>
       </div>
       <div class="route-content" aria-live="polite">
         <div class="route-number" id="route-number">293</div>
@@ -58,7 +58,7 @@
       <div class="section-intro"><h2 id="install-title">Install and play.</h2><p>Choose the path that matches your setup. The first run takes only a few steps.</p></div>
       <div class="install-board">
         <article class="install-card"><h3>With Companion</h3><div class="drop-visual" aria-hidden="true"><span class="drop-app"><img src="assets/app-icon.png" width="72" height="72" alt="">MX2 Companion</span><span class="drop-arrow">→</span><span class="drop-folder">Applications</span></div><ol><li>Open the DMG and drag MX2 Companion into Applications.</li><li>Connect the MX2, choose Native or MIDI in Companion, then start the connection.</li><li>Import the matching mapping in djay and select the virtual <b>MX2 for djay</b> device.</li></ol></article>
-        <article class="install-card direct-card"><h3>Classic MIDI</h3><p class="large-note">The working setup before the app.</p><ol><li>Switch the MX2 to MIDI mode.</li><li>Run <b>DEMARRER-MX2.command</b> and keep its Terminal window open.</li><li>Import <b>Visual Complete</b> in djay and select the virtual <b>MX2 for djay</b> device.</li></ol><p class="limits">The package includes the original 293-action mapping and the MIDI bridge that drives its SHIFT layers, pad modes and feedback. Disable djay’s physical Traktor MX2 MIDI input to avoid duplicate commands.</p><a href="downloads/MX2-Classic-MIDI-0.5.0.zip" download>Download Classic MIDI <span aria-hidden="true">↗</span></a></article>
+        <article class="install-card direct-card"><h3>Classic MIDI</h3><p class="large-note">The working setup before the app. Requires the Terminal bridge.</p><ol><li>Switch the MX2 to MIDI mode.</li><li>Run <b>DEMARRER-MX2.command</b> and keep its Terminal window open.</li><li>Import <b>Visual Complete</b> in djay and select the virtual <b>MX2 for djay</b> device.</li></ol><p class="limits">The mapping file alone is not a complete direct MX2 mapping. The included bridge drives its SHIFT layers, pad modes and feedback. Disable djay’s physical Traktor MX2 MIDI input to avoid duplicate commands.</p><a href="downloads/MX2-Classic-MIDI-0.5.0.zip" download>Download Classic MIDI <span aria-hidden="true">↗</span></a></article>
       </div>
     </section>
 
@@ -66,7 +66,7 @@
       <div class="section-intro"><h2 id="questions-title">Good to know.</h2></div>
       <div class="question-list">
         <details><summary>Can I use MIDI mode with Companion?</summary><p>Yes. Select MIDI in Companion and on the MX2, then use the Visual Complete mapping with the virtual MX2 for djay device in djay.</p></details>
-        <details><summary>Can I use the mapping without the app?</summary><p>Yes. Use the Classic MIDI package. Keep its Terminal launcher open while mixing: the Visual Complete mapping depends on that bridge for deck modes, SHIFT, pad banks and feedback.</p></details>
+        <details><summary>Is there a complete mapping that works without an app or Terminal?</summary><p>Not in this release. Visual Complete requires Companion or the included MIDI bridge. Importing that file directly for the physical Traktor MX2 will not provide its SHIFT layers, four pad banks or feedback.</p></details>
         <details><summary>Which audio channels should I choose?</summary><p>Set the MX2 main output to channels 1–2 and headphones to 3–4 in djay. For a single-deck preview, select the deck’s headphone cue and turn CUE MIX toward CUE.</p></details>
         <details><summary>Why does macOS ask me to approve the app?</summary><p>This build is not notarized by Apple. If macOS blocks the first launch, open System Settings → Privacy &amp; Security and choose Open Anyway after trying to open the app. <a href="https://support.apple.com/en-ie/102445">See Apple’s instructions</a>.</p></details>
         <details><summary>Does it support Windows or Intel Macs?</summary><p>The downloadable app is built for Apple silicon Macs. Windows and Intel Mac packages have not been validated on controller hardware.</p></details>

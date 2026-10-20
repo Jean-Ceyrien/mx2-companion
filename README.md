@@ -1,6 +1,6 @@
 # MX2 Companion
 
-A Mac companion for using the Traktor MX2 with djay Pro. Choose the app for its Native and MIDI modes, or run the original MIDI setup from Terminal without the app.
+A Mac companion for using the Traktor MX2 with djay Pro. Choose the app for its Native and MIDI modes, or run the original MIDI bridge from Terminal. This release does not include a complete standalone djay mapping for the physical MX2.
 
 **[Open the website](docs/index.html)** · **[Mac app](docs/downloads/MX2-Companion-0.5.0-macOS-arm64.dmg)** · **[Classic MIDI package](docs/downloads/MX2-Classic-MIDI-0.5.0.zip)**
 
@@ -19,7 +19,7 @@ This build is not notarized by Apple. If macOS blocks the first launch, follow [
 2. Switch the MX2 to MIDI mode and run `DEMARRER-MX2.command`. Keep its Terminal window open.
 3. Import `Traktor MX2 - Visual Complete.djayMidiMapping` in djay, select the virtual `MX2 for djay` device, and disable djay's direct `Traktor MX2` MIDI input.
 
-The package contains the original 293-action mapping, MIDI bridge and full setup guide. This is the pre-app configuration previously checked on both decks. The mapping file alone needs the included bridge for SHIFT, pad modes and feedback.
+The package contains the original 293-action mapping, MIDI bridge and full setup guide. This is the pre-app configuration previously checked on both decks. The mapping file alone does not provide a complete direct MX2 mapping: it needs the bridge for SHIFT, pad modes and feedback.
 
 ## Website
 

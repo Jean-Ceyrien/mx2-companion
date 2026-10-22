@@ -1,4 +1,4 @@
-# MX2 Companion
+# Native Instruments MX2 Companion for Djay Pro
 
 A Mac companion for using the Traktor MX2 with djay Pro. Choose the app for its Native and MIDI modes, or run the original MIDI bridge from Terminal. This release does not include a complete standalone djay mapping for the physical MX2.
 

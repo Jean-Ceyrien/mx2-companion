@@ -3,7 +3,7 @@ altgraph==0.17.5
 bottle==0.13.4
 macholib==1.16.4
 packaging==26.3
-pillow==11.3.0
+pillow==13.0.0
 pip==25.0.1
 proxy_tools==0.1.0
 pyinstaller==6.22.0

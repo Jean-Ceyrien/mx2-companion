@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="MX2 Companion: connected decks">
+ <rect x="4" y="4" width="120" height="120" rx="29" fill="#14243a"/>
+ <g fill="none" stroke="#8fd7ec" stroke-width="7"><circle cx="40" cy="52" r="21"/><circle cx="88" cy="52" r="21"/></g>
+ <g fill="#8fd7ec"><circle cx="40" cy="52" r="4"/><circle cx="88" cy="52" r="4"/></g>
+ <path d="M36 91h56" stroke="#8fd7ec" stroke-width="5" stroke-linecap="round"/>
+ <rect x="59" y="80" width="10" height="22" rx="3" fill="#f59783"/>
+</svg>

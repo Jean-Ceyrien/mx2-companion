@@ -26,3 +26,11 @@ The package contains the original 293-action mapping, MIDI bridge and full setup
 The English site is in `docs/`. The GitHub Actions workflow deploys it through GitHub Pages from the `main` branch after Pages is enabled in repository settings.
 
 MX2 Companion is a community project. Traktor MX2 is a Native Instruments product, and djay is an Algoriddim product. See [notices](NOTICES.md).
+
+## License and source code
+
+Copyright (C) 2026 Jean-Ceyrien and contributors. Original project code is licensed under **GNU GPL version 3 only (GPL-3.0-only)**, without warranty. See [LICENSE](LICENSE) and [licensing scope](LICENSING.md). Third-party components and assets retain their own terms.
+
+**[Browse the 0.5.0 source](source/)** · **[Download the corresponding source](docs/downloads/MX2-Companion-0.5.0-source.zip)**
+
+The source kit includes the application, Classic MIDI bridge, Swift transports, mappings, interface resources, tests and build instructions. See [source README](source/README.md). Runtime sources match the archived release; packaging and licensing were updated on 22 October 2026.

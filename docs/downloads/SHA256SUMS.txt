@@ -1,0 +1,3 @@
+8dd2bd829bfd9b8f35846eb5e9f4b3224fe89ac3ec226865be4319c60bba79b1  MX2-Classic-MIDI-0.5.0.zip
+fb63999478a009a5c54f478b0e2a20aa592aca8e3a644531a607038c3ab3aa9d  MX2-Companion-0.5.0-macOS-arm64.dmg
+be4028e82fdc89713c05ccc24d04ecad4dfe9dbe4e763a6bae3614b0338fe872  MX2-Companion-0.5.0-source.zip

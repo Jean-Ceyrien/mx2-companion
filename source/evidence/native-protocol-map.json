@@ -1,0 +1,648 @@
+{
+  "provenance": {
+    "kind": "static arm64 disassembly",
+    "target": "/Applications/Native Instruments/Traktor Pro 4/Traktor Pro 4.app/Contents/MacOS/Traktor Pro 4",
+    "basis": "MX2PortDescriptor constructor0x10027684c; inline string bytes reconstructed from immediate and file-backed loads; inspect evidence/native-port-descriptor.txt",
+    "not_hardware_validation": true
+  },
+  "buttons": {
+    "60": {
+      "name": "mixer.channels.1.deck_fx_assign.1",
+      "address": "0x100276a04",
+      "ledId": 60
+    },
+    "61": {
+      "name": "mixer.channels.1.deck_fx_assign.2",
+      "address": "0x100276a54",
+      "ledId": 61
+    },
+    "63": {
+      "name": "mixer.channels.1.cue",
+      "address": "0x100276aa0",
+      "ledId": 63
+    },
+    "62": {
+      "name": "mixer.channels.1.channel_fx.on",
+      "address": "0x100276cec",
+      "ledId": 62
+    },
+    "64": {
+      "name": "mixer.channels.2.deck_fx_assign.1",
+      "address": "0x100276d94",
+      "ledId": 64
+    },
+    "65": {
+      "name": "mixer.channels.2.deck_fx_assign.2",
+      "address": "0x100276de4",
+      "ledId": 65
+    },
+    "67": {
+      "name": "mixer.channels.2.cue",
+      "address": "0x100276e30",
+      "ledId": 67
+    },
+    "66": {
+      "name": "mixer.channels.2.channel_fx.on",
+      "address": "0x10027705c",
+      "ledId": 66
+    },
+    "68": {
+      "name": "mixer.channel_fx.fx1",
+      "address": "0x1002770f8",
+      "ledId": 68
+    },
+    "69": {
+      "name": "mixer.channel_fx.fx2",
+      "address": "0x100277144",
+      "ledId": 69
+    },
+    "70": {
+      "name": "mixer.channel_fx.fx3",
+      "address": "0x100277190",
+      "ledId": 70
+    },
+    "71": {
+      "name": "mixer.channel_fx.fx4",
+      "address": "0x1002771dc",
+      "ledId": 71
+    },
+    "72": {
+      "name": "mixer.channel_fx.filter",
+      "address": "0x100277230",
+      "ledId": 72
+    },
+    "73": {
+      "name": "mixer.mic",
+      "address": "0x100277274",
+      "ledId": 73
+    },
+    "0": {
+      "name": "left.fx.buttons.1",
+      "address": "0x1002773c8",
+      "ledId": 0
+    },
+    "1": {
+      "name": "left.fx.buttons.2",
+      "address": "0x10027740c",
+      "ledId": 1
+    },
+    "2": {
+      "name": "left.fx.buttons.3",
+      "address": "0x100277450",
+      "ledId": 2
+    },
+    "3": {
+      "name": "left.fx.buttons.4",
+      "address": "0x100277494",
+      "ledId": 3
+    },
+    "4": {
+      "name": "left.browse.favorite",
+      "address": "0x1002774e0",
+      "ledId": 4
+    },
+    "5": {
+      "name": "left.browse.add_to_list",
+      "address": "0x100277534",
+      "ledId": 5
+    },
+    "6": {
+      "name": "left.browse.preview",
+      "address": "0x100277580",
+      "ledId": 6
+    },
+    "7": {
+      "name": "left.browse.view",
+      "address": "0x1002775c0",
+      "ledId": 7
+    },
+    "74": {
+      "name": "left.browse.encoder.push",
+      "address": "0x10027760c"
+    },
+    "8": {
+      "name": "left.flux",
+      "address": "0x100277650",
+      "ledId": 8
+    },
+    "9": {
+      "name": "left.reverse",
+      "address": "0x10027769c",
+      "ledId": 9
+    },
+    "10": {
+      "name": "left.mode.turntable",
+      "address": "0x1002776e8",
+      "ledId": 10
+    },
+    "11": {
+      "name": "left.mode.jogwheel",
+      "address": "0x100277730",
+      "ledId": 11
+    },
+    "80": {
+      "name": "left.jogwheel.touch",
+      "address": "0x100277790"
+    },
+    "12": {
+      "name": "left.shift",
+      "address": "0x1002777d8",
+      "ledId": 12
+    },
+    "13": {
+      "name": "left.sync",
+      "address": "0x10027781c",
+      "ledId": 13
+    },
+    "14": {
+      "name": "left.master",
+      "address": "0x100277868",
+      "ledId": 14
+    },
+    "15": {
+      "name": "left.key_lock",
+      "address": "0x1002778b0",
+      "ledId": 15
+    },
+    "16": {
+      "name": "left.hotcues",
+      "address": "0x1002778fc",
+      "ledId": 16
+    },
+    "17": {
+      "name": "left.stems",
+      "address": "0x100277944",
+      "ledId": 17
+    },
+    "18": {
+      "name": "left.pattern",
+      "address": "0x100277990",
+      "ledId": 18
+    },
+    "19": {
+      "name": "left.flux_loop",
+      "address": "0x1002779d8",
+      "ledId": 19
+    },
+    "75": {
+      "name": "left.loop_move.push",
+      "address": "0x100277a20"
+    },
+    "76": {
+      "name": "left.loop_size.push",
+      "address": "0x100277a68"
+    },
+    "20": {
+      "name": "left.pads.1",
+      "address": "0x100277ab4",
+      "ledId": 20
+    },
+    "21": {
+      "name": "left.pads.2",
+      "address": "0x100277b00",
+      "ledId": 21
+    },
+    "22": {
+      "name": "left.pads.3",
+      "address": "0x100277b4c",
+      "ledId": 22
+    },
+    "23": {
+      "name": "left.pads.4",
+      "address": "0x100277b98",
+      "ledId": 23
+    },
+    "24": {
+      "name": "left.pads.5",
+      "address": "0x100277be4",
+      "ledId": 24
+    },
+    "25": {
+      "name": "left.pads.6",
+      "address": "0x100277c30",
+      "ledId": 25
+    },
+    "26": {
+      "name": "left.pads.7",
+      "address": "0x100277c7c",
+      "ledId": 26
+    },
+    "27": {
+      "name": "left.pads.8",
+      "address": "0x100277cc8",
+      "ledId": 27
+    },
+    "28": {
+      "name": "left.cue",
+      "address": "0x100277d0c",
+      "ledId": 28
+    },
+    "29": {
+      "name": "left.play",
+      "address": "0x100277d50",
+      "ledId": 29
+    },
+    "30": {
+      "name": "right.fx.buttons.1",
+      "address": "0x100277f44",
+      "ledId": 30
+    },
+    "31": {
+      "name": "right.fx.buttons.2",
+      "address": "0x100277f8c",
+      "ledId": 31
+    },
+    "32": {
+      "name": "right.fx.buttons.3",
+      "address": "0x100277fd4",
+      "ledId": 32
+    },
+    "33": {
+      "name": "right.fx.buttons.4",
+      "address": "0x10027801c",
+      "ledId": 33
+    },
+    "34": {
+      "name": "right.browse.favorite",
+      "address": "0x100278064",
+      "ledId": 34
+    },
+    "35": {
+      "name": "right.browse.add_to_list",
+      "address": "0x1002780b8",
+      "ledId": 35
+    },
+    "36": {
+      "name": "right.browse.preview",
+      "address": "0x100278104",
+      "ledId": 36
+    },
+    "37": {
+      "name": "right.browse.view",
+      "address": "0x100278148",
+      "ledId": 37
+    },
+    "77": {
+      "name": "right.browse.encoder.push",
+      "address": "0x100278194"
+    },
+    "38": {
+      "name": "right.flux",
+      "address": "0x1002781dc",
+      "ledId": 38
+    },
+    "39": {
+      "name": "right.reverse",
+      "address": "0x100278224",
+      "ledId": 39
+    },
+    "40": {
+      "name": "right.mode.turntable",
+      "address": "0x100278270",
+      "ledId": 40
+    },
+    "41": {
+      "name": "right.mode.jogwheel",
+      "address": "0x1002782bc",
+      "ledId": 41
+    },
+    "81": {
+      "name": "right.jogwheel.touch",
+      "address": "0x10027831c"
+    },
+    "42": {
+      "name": "right.shift",
+      "address": "0x100278368",
+      "ledId": 42
+    },
+    "43": {
+      "name": "right.sync",
+      "address": "0x1002783b0",
+      "ledId": 43
+    },
+    "44": {
+      "name": "right.master",
+      "address": "0x1002783fc",
+      "ledId": 44
+    },
+    "45": {
+      "name": "right.key_lock",
+      "address": "0x100278444",
+      "ledId": 45
+    },
+    "46": {
+      "name": "right.hotcues",
+      "address": "0x10027848c",
+      "ledId": 46
+    },
+    "47": {
+      "name": "right.stems",
+      "address": "0x1002784d8",
+      "ledId": 47
+    },
+    "48": {
+      "name": "right.pattern",
+      "address": "0x100278520",
+      "ledId": 48
+    },
+    "49": {
+      "name": "right.flux_loop",
+      "address": "0x100278568",
+      "ledId": 49
+    },
+    "78": {
+      "name": "right.loop_move.push",
+      "address": "0x1002785b0"
+    },
+    "79": {
+      "name": "right.loop_size.push",
+      "address": "0x1002785f8"
+    },
+    "50": {
+      "name": "right.pads.1",
+      "address": "0x100278644",
+      "ledId": 50
+    },
+    "51": {
+      "name": "right.pads.2",
+      "address": "0x100278690",
+      "ledId": 51
+    },
+    "52": {
+      "name": "right.pads.3",
+      "address": "0x1002786dc",
+      "ledId": 52
+    },
+    "53": {
+      "name": "right.pads.4",
+      "address": "0x100278728",
+      "ledId": 53
+    },
+    "54": {
+      "name": "right.pads.5",
+      "address": "0x100278774",
+      "ledId": 54
+    },
+    "55": {
+      "name": "right.pads.6",
+      "address": "0x1002787c0",
+      "ledId": 55
+    },
+    "56": {
+      "name": "right.pads.7",
+      "address": "0x10027880c",
+      "ledId": 56
+    },
+    "57": {
+      "name": "right.pads.8",
+      "address": "0x100278858",
+      "ledId": 57
+    },
+    "58": {
+      "name": "right.cue",
+      "address": "0x10027889c",
+      "ledId": 58
+    },
+    "59": {
+      "name": "right.play",
+      "address": "0x1002788e4",
+      "ledId": 59
+    },
+    "82": {
+      "name": null,
+      "status": "decoder allocates83 buttons; no named declaration found in MX2 constructor"
+    }
+  },
+  "analog": {
+    "18": {
+      "name": "mixer.main.volume",
+      "address": "0x1002768dc",
+      "kind": "knob"
+    },
+    "19": {
+      "name": "mixer.cue_mix",
+      "address": "0x100276920",
+      "kind": "knob"
+    },
+    "20": {
+      "name": "mixer.cue_vol",
+      "address": "0x100276964",
+      "kind": "knob"
+    },
+    "23": {
+      "name": "mixer.xfader",
+      "address": "0x1002769ac",
+      "kind": "fader"
+    },
+    "8": {
+      "name": "mixer.channels.1.gain",
+      "address": "0x100276ae4",
+      "kind": "knob"
+    },
+    "9": {
+      "name": "mixer.channels.1.eq.high",
+      "address": "0x100276b3c",
+      "kind": "knob"
+    },
+    "10": {
+      "name": "mixer.channels.1.eq.mid",
+      "address": "0x100276b94",
+      "kind": "knob"
+    },
+    "11": {
+      "name": "mixer.channels.1.eq.low",
+      "address": "0x100276be4",
+      "kind": "knob"
+    },
+    "21": {
+      "name": "mixer.channels.1.volume",
+      "address": "0x100276c34",
+      "kind": "fader"
+    },
+    "12": {
+      "name": "mixer.channels.1.channel_fx.amount",
+      "address": "0x100276d44",
+      "kind": "knob"
+    },
+    "13": {
+      "name": "mixer.channels.2.gain",
+      "address": "0x100276e74",
+      "kind": "knob"
+    },
+    "14": {
+      "name": "mixer.channels.2.eq.high",
+      "address": "0x100276ec4",
+      "kind": "knob"
+    },
+    "15": {
+      "name": "mixer.channels.2.eq.mid",
+      "address": "0x100276f14",
+      "kind": "knob"
+    },
+    "16": {
+      "name": "mixer.channels.2.eq.low",
+      "address": "0x100276f64",
+      "kind": "knob"
+    },
+    "22": {
+      "name": "mixer.channels.2.volume",
+      "address": "0x100276fb4",
+      "kind": "fader"
+    },
+    "17": {
+      "name": "mixer.channels.2.channel_fx.amount",
+      "address": "0x1002770ac",
+      "kind": "knob"
+    },
+    "0": {
+      "name": "left.fx.knobs.1",
+      "address": "0x1002772b8",
+      "kind": "knob"
+    },
+    "1": {
+      "name": "left.fx.knobs.2",
+      "address": "0x1002772fc",
+      "kind": "knob"
+    },
+    "2": {
+      "name": "left.fx.knobs.3",
+      "address": "0x100277340",
+      "kind": "knob"
+    },
+    "3": {
+      "name": "left.fx.knobs.4",
+      "address": "0x100277384",
+      "kind": "knob"
+    },
+    "24": {
+      "name": "left.pitch.fader",
+      "address": "0x100277d8c",
+      "kind": "fader"
+    },
+    "4": {
+      "name": "right.fx.knobs.1",
+      "address": "0x100277e48",
+      "kind": "knob"
+    },
+    "5": {
+      "name": "right.fx.knobs.2",
+      "address": "0x100277e84",
+      "kind": "knob"
+    },
+    "6": {
+      "name": "right.fx.knobs.3",
+      "address": "0x100277ec0",
+      "kind": "knob"
+    },
+    "7": {
+      "name": "right.fx.knobs.4",
+      "address": "0x100277efc",
+      "kind": "knob"
+    },
+    "25": {
+      "name": "right.pitch.fader",
+      "address": "0x100278924",
+      "kind": "fader"
+    }
+  },
+  "encoders": {
+    "0": {
+      "name": "left.browse.encoder",
+      "address": "0x10027760c",
+      "pushButtonId": 74
+    },
+    "1": {
+      "name": "left.loop_move",
+      "address": "0x100277a20",
+      "pushButtonId": 75
+    },
+    "2": {
+      "name": "left.loop_size",
+      "address": "0x100277a68",
+      "pushButtonId": 76
+    },
+    "3": {
+      "name": "right.browse.encoder",
+      "address": "0x100278194",
+      "pushButtonId": 77
+    },
+    "4": {
+      "name": "right.loop_move",
+      "address": "0x1002785b0",
+      "pushButtonId": 78
+    },
+    "5": {
+      "name": "right.loop_size",
+      "address": "0x1002785f8",
+      "pushButtonId": 79
+    }
+  },
+  "jogwheels": {
+    "0": {
+      "name": "left.jogwheel",
+      "address": "0x100277790",
+      "touchButtonId": 80,
+      "modulus": 960
+    },
+    "1": {
+      "name": "right.jogwheel",
+      "address": "0x10027831c",
+      "touchButtonId": 81,
+      "modulus": 960
+    }
+  },
+  "output": {
+    "reportId": 128,
+    "payloadLength": 105,
+    "buttonLedIds": "0..73 correspond to button IDs",
+    "bottomChains": {
+      "left": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "right": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ]
+    },
+    "mainClip": 86,
+    "compoundGroups": [
+      [
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ],
+      [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ]
+    ],
+    "rawByteFormula": "((colorEnum << 2) + state) & 255",
+    "stateDim": 0,
+    "stateFull": 2,
+    "offRawByte": 0,
+    "defaultColorEnum": 31,
+    "paletteNames": "unresolved; do not infer RGB from enum"
+  }
+}

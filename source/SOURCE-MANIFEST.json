@@ -1,0 +1,28 @@
+{
+  "version": "0.5.0",
+  "license": "GPL-3.0-only",
+  "licensing_update": "2026-10-22",
+  "runtime_source_origin": "Archived MX2-Companion-0.5.0-source; later workspace runtime changes excluded",
+  "python_module_correspondence": "All 11 modules and entrypoint match compiled application code after removing build filenames",
+  "resources_correspondence": "All app interface assets, mappings and reference data match byte-for-byte",
+  "classic_correspondence": "All original Classic MIDI archive payload files match byte-for-byte",
+  "software_tests": {
+    "count": 67,
+    "result": "passed",
+    "hardware_test": false
+  },
+  "application_executable_sha256": "dcfcccfa02133d3df540d75111855f27d3aedef41c2d7d13c02df843090fb32d",
+  "module_source_sha256": {
+    "decode_mx2": "a3b2bf05d43fb525a4091db35a0d2c66f9d2518e199cc93b43d121b3c49c155d",
+    "mx2_bridge": "d66c0ee44bb0c633f39d18f0ceeff5b9b6307c32efae870e4d2d5e1f8129631a",
+    "mx2_desktop": "2b3d20e07c9ed760f37298c3d0b8852e0479864750584549293f531aec2d8f92",
+    "mx2_device_monitor": "bc3a8a6d1edefa9fc093b05cb742eec65d849d9f4afac6e10c1bf1d0fe593105",
+    "mx2_native": "2ea61147eed1cabf1ff1df5cc2ccacae14299bf927a7a8694d17ff3cac574393",
+    "mx2_native_bridge": "aed6849f7ce5cac7f4acbb60393094299cd974b36ee44d663a58527113feb083",
+    "mx2_portable_transport": "9d16cf89b4413a113dde916aa4a24fc136aaabbc1c995005130732526f0c07ca",
+    "mx2_runtime_lock": "edc6ceb63b11bb840e6ceaaed705193d563353a0ab410532fccd9c920409e7cc",
+    "mx2_webapp": "5605fc80041a95e1f01009d39908457c7ef3d54bb1a6e8409d98dcf54cf8407c",
+    "mx2_windows_feedback": "e39f366e11a74b0e95ad0cabbc785a6f4141894e506a4507453cf33c9a953efb",
+    "summarize_midi": "49001ff020af6f8a659e435e988a1ccc8ca21d316a6903e6c67f73df33dd14d1"
+  }
+}

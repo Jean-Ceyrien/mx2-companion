@@ -1,0 +1,280 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>MX2 for djay — Start here</title><style>body{font:18px/1.6 system-ui;background:#f4f6fa;color:#172439;max-width:850px;margin:32px auto;padding:24px}h1{font-size:38px}li{margin:12px 0}details{background:white;border-radius:8px;padding:18px;margin:18px 0}summary{cursor:pointer;font-weight:bold}pre{white-space:pre-wrap;font:16px/1.6 system-ui;overflow-wrap:anywhere}</style><h1>MX2 for djay</h1><p>Keep the companion app open while mixing. No Terminal is needed in the packaged Mac app.</p><ol><li>Choose Native or MIDI in Companion and use the same mode on the MX2. Press both SHIFT buttons together once to change the hardware mode.</li><li>Open <b>MX2 Companion</b> and click <b>Start connection</b>.</li><li>Click <b>Install djay mapping</b> if it is not installed. Confirm in djay, quit and reopen djay once while Companion stays open, then select <b>MX2 for djay</b> and the mapping for your selected connection mode: Native RGB or Visual Complete on Mac.</li><li>Disable the direct <b>Traktor MX2</b> MIDI connection in djay.</li><li>Set MX2 main audio to channels <b>1–2</b>, headphones to <b>3–4</b>. For previewing only one deck: manual cue selection, CUE MIX toward CUE.</li></ol><p><b>Stop &amp; quit</b> shows shutdown progress, stops the bridge and device monitor, then closes Companion. djay Pro stays open.</p><p><b>Mac:</b> Apple Silicon build. Intel needs a separate build. <b>Windows:</b> preview source/build path, not hardware validated. Create one loopMIDI bus named <b>MX2 for djay</b>. Use the Windows RGB mapping.</p><p>For momentary FX4, turn off the effect's HOLD option in djay. Both SHIFT buttons together switch the hardware mode; do not press them together while mixing.</p><details><summary>Setup and troubleshooting</summary><pre># MX2 Companion
+
+Use a Native Instruments Traktor MX2 with djay through the companion bridge and its mapping. The bridge handles the controls, touch-sensitive jog wheels, pad banks, and RGB lights. djay handles playback and audio.
+
+The mapping contains **293 action rows**, plus four dedicated meter/end-warning outputs. That count includes SHIFT actions and intentional effect macros; it is not a count of hardware buttons. A mapping file alone cannot provide this integration: keep the bridge running while you use djay.
+
+The native integration has been physically tested on macOS with djay 5.6.9 and an MX2. The Windows implementation requires separate validation; see [Validation and limitations](VALIDATION.md). This is a community integration, not an official Native Instruments or Algoriddim product.
+
+## First setup on Mac
+
+1. Connect the MX2 by USB. Close other controller bridges and Traktor so that only this bridge controls the MX2.
+2. Open **MX2 Companion.app**, then click **Start connection**. Keep the app open while mixing.
+3. Choose **Native** or **MIDI** in Companion and use that mode on the MX2. If the app reports a different mode, press the two physical SHIFT buttons together once, then move a control to confirm. Do not repeatedly switch modes. Pressing both SHIFT buttons together is a hardware mode switch, not a DJ command. Stop the bridge before changing the selection in Companion.
+4. Click **Install djay mapping** and confirm the import in djay. Select the virtual device **MX2 for djay** and the configuration **Traktor MX2 - Native RGB** for Native or **Traktor MX2 - Visual Complete** for MIDI in djay&#x27;s MIDI settings. The button opens the supplied file for djay to import; it does not silently replace files in your mapping folder.
+5. Disable djay&#x27;s direct MIDI connection to **Traktor MX2** if it is enabled. Use the virtual device for controls to avoid duplicate actions.
+6. In djay&#x27;s audio device settings, choose MX2 channels **1–2 for the main output** and **3–4 for headphone monitoring**, then apply the settings. These settings are separate from the MIDI mapping.
+7. Load a track on each deck. Check PLAY and CUE on each side, then turn the volume up gradually.
+
+The MIDI choice uses the original CoreMIDI bridge and Visual Complete mapping. Native retains the RGB HID bridge. Only one bridge can run at a time; Stop &amp; quit closes the selected bridge.
+
+The Mac package targets **Apple silicon (arm64), macOS 11 or later** and includes its Python runtime, web interface and native transport. You do not need to install Python or use Terminal. Intel Macs need a separately built and tested package. If macOS displays a security message for an unsigned build, review the source and the release you downloaded before using the system&#x27;s **Open Anyway** option. Signing status is recorded in the release notes.
+
+For later sessions, connect the MX2, open the app, and click **Start connection**. djay should remember the installed mapping. **Stop &amp; quit** shows the shutdown progress while the bridge and device monitor stop, then closes Companion. Do not run the older Terminal bridge at the same time.
+
+## Hear a different track in your headphones
+
+Plug your headphones into the MX2. In djay&#x27;s monitoring panel, turn automatic deck selection off. Set **CUE MIX toward CUE**, and set **CUE VOL** to a moderate level. Enable the small headphone button for the deck you want to preview; disable it for the other deck.
+
+At the MIX end of CUE MIX, the headphones play the main output. In the middle they blend the preview and main outputs. If you only hear the live track, check both this knob and the channels 3–4 monitor assignment.
+
+## Windows setup: testing required
+
+The Windows source and build instructions are provided for testing. They are not a verified, ready-to-use Windows release yet. The executable must be built on Windows using the supplied PowerShell build process. Native HID access, djay&#x27;s MIDI feedback routing, and audio channels must be checked on real Windows hardware before describing Windows as supported.
+
+Install and run loopMIDI. Create **one port named exactly `MX2 for djay`**, then start the Windows bridge. Click **Import mapping**, confirm the import, and select that virtual device with the supplied Windows-specific mapping in djay. The bridge uses the bus&#x27;s matching input/output names and filters input echoes; the Windows mapping reserves separate MIDI channels for feedback. Use the Windows mapping included with that build, not the Mac file.
+
+Virtual MIDI feedback on Windows remains a verification point: controls responding does not prove that RGB lights or meters work. Set up the MX2&#x27;s main and headphone audio devices separately in djay; Windows audio-driver behavior is also unverified. Follow the [Windows release gate](VALIDATION.md#windows-release-gate) before sharing a Windows build as supported.
+
+## Controls and lights
+
+Read the [complete control guide](CONTROL-GUIDE.md). Both sides control their own decks. The four pad modes are HOTCUES, STEMS, PATTERN (djay samples), and FLUX LOOP. Pads use mode colors; they do not copy the individual colors of djay hotcues.
+
+For the mixer selector&#x27;s **FX4**, disable the effect&#x27;s **HOLD** option inside djay if you want momentary operation. Hold the channel&#x27;s round FX ON button to apply the instant effect; release it to stop. The channel amount knob remains a filter in this adapted mode.
+
+## If something does not work
+
+| Symptom | Check |
+|---|---|
+| No controls respond | Bridge is started, the MX2 mode matches Companion, and djay uses the virtual endpoint and matching mapping |
+| A button triggers twice | Disable the raw Traktor MX2 MIDI connection and stop any second bridge |
+| Controls work but lights do not | Check the selected mapping; on Windows also check the separate feedback output |
+| Headphones play only the live mix | Select monitor channels 3–4, turn off automatic selection, set CUE MIX toward CUE, and enable the intended deck&#x27;s headphone button |
+| FX4 stays on after release | Turn off the instant effect&#x27;s HOLD option in djay |
+| Some knobs need moving after reconnect | Move them carefully to the desired setting; the bridge has no pickup/soft-takeover function |
+
+USB reconnect and a normal djay restart were tested successfully on the development Mac while the bridge stayed open. Recheck these behaviors on your own machine before a session. See [Validation and limitations](VALIDATION.md) for the exact scope.
+
+## Share this integration
+
+Share the release archive with its companion app, mappings, and these guides together. Do not share just the `.djayMidiMapping` file as a stand-alone controller solution. Keep the mapping filenames and port names intact. The package does not require the developer&#x27;s personal calibration recordings or session logs.
+
+## Testing in Parallels Desktop
+
+Build the Windows package inside Windows, not in the Mac shared folder. Copy the source folder to your Windows desktop, install Python 3.12 (64-bit) with Tcl/Tk and the Python launcher, then run `distribution/BUILD-WINDOWS.ps1` from PowerShell. Install loopMIDI separately from its official author and create the `MX2 for djay` port. Connect the MX2 to the Windows virtual machine using Parallels USB controls; close the Mac bridge first. Test device access, PLAY/CUE, jog touch/release, lights/meters, audio main 1–2 and headphones 3–4, reconnect and app restart. Windows-on-ARM emulation and any audio drivers must be verified independently.
+
+## Live device status and the interactive cheat sheet
+
+The guided desktop interface starts a passive monitor when the app opens and keeps it active even if the bridge is stopped. USB presence and actual incoming reports determine the status. Native/MIDI mode is confirmed only from positive live input; if evidence becomes stale, move a control to confirm the current mode. No firmware command changes modes. Press both physical SHIFT buttons together once when instructed.
+
+Choose Cheat sheet from the navigation or press Command-K (Mac) / Ctrl-K (Windows). Click a controller hotspot, choose a pad bank, or enable the SHIFT layer. The offline sheet also lives in the release folder under Cheat sheet/cheatsheet.html and can be opened separately at any time.
+
+Companion supports djay Pro only. The **Stop &amp; quit** action shows progress while stopping its bridge, then closes Companion. It does not close djay Pro.
+
+Windows uses Microsoft Edge WebView2 Runtime for the new interface. If missing, install it from Microsoft before opening the app. Windows and Intel Mac builds remain unvalidated.
+
+## Companion 0.5 interface
+
+Use Connection for the three setup steps, Controls for the interactive MX2 photograph, and Audio &amp; help for routing and troubleshooting. Live status stays at the top. If the supplied mapping is already installed, Install djay mapping does not create another copy. Select MX2 for djay inside djay and close its MIDI editor after setup.
+
+If the crossfader follows a jog, check MIDI &gt; Options &gt; Crossfader Cutting Mode and disable it. Also ensure the direct Traktor MX2 MIDI connection is disabled. If the issue appears after importing a mapping, quit and reopen djay while keeping Companion running. This cleared the reported issue in the hardware retest. The captured jog MIDI contained no crossfader commands; the exact internal djay cause is not established.
+</pre></details><details><summary>All controls</summary><pre># MX2 for djay — control guide
+
+Choose Native with the supplied Native RGB mapping or MIDI with the original Visual Complete mapping in Companion. Left controls operate deck A; right controls operate deck B. SHIFT means **hold only the SHIFT button on that side**. Do not press both SHIFT buttons together during a session: that switches the hardware between native and MIDI mode.
+
+These tables describe implemented assignments. They do not imply that every secondary combination has been physically tested. The mapping has 293 action rows; [Validation](VALIDATION.md) distinguishes tested behavior from remaining checks.
+
+## Playback, jogs, and library
+
+| Physical control | Normal action | With same-side SHIFT |
+|---|---|---|
+| PLAY | Play/pause | Return to start cue and pause |
+| CUE | Set/return to the main cue according to playback state | Jump to beginning of track |
+| SYNC | Sync tempo/beats | Toggle quantize |
+| MASTER | Make this deck the tempo master | Reset tempo |
+| KEY | Key lock | Match key |
+| FLUX | Toggle slip | Same |
+| Reverse | Censor/reverse while held | Toggle reverse |
+| TT / JOG mode buttons | Select touch-scratch mode / jog mode | Same |
+| Jog wheel | In TT mode, touch to scratch/hold; release resumes normal playback. Rotation without scratch touch moves/nudges the deck | Seek through the track |
+| TEMPO fader | Change tempo | Same |
+| BROWSE rotation | Select tracks | Select library sources |
+| BROWSE press | Load selected track onto this deck | Load without instant double |
+| Favorite/library queue button | Focus queue | Focus sources |
+| Preparation/add-to-list button | Mark selected songs | Unmark selected songs |
+| Preview button | Toggle preview | Same |
+| View button | Show/hide library | Same |
+
+## Two encoders below each jog
+
+Rotation and pressing are separate actions. The **left encoder** is MOVE; the **right encoder** is SIZE.
+
+| Gesture | Action |
+|---|---|
+| Turn left encoder | Beatjump forward/backward |
+| SHIFT + turn left encoder | Move an active loop earlier/later, preserving its duration |
+| Press left encoder | Loop in/out action |
+| SHIFT + press left encoder | Same loop in/out action |
+| Turn right encoder | Change autoloop duration |
+| SHIFT + turn right encoder | Change the beatjump distance used by the left encoder |
+| Press right encoder | Activate/deactivate autoloop |
+| SHIFT + press right encoder | Same autoloop toggle |
+
+## Four FX buttons and knobs at the top of each deck
+
+Count from left to right. The first button/knob is a three-slot macro; the following three address FX1, FX2, and FX3.
+
+| Control | Normal action | With SHIFT |
+|---|---|---|
+| Button 1 | Toggle each of the three FX slots | Toggle overall deck FX |
+| Buttons 2, 3, 4 | Toggle FX1, FX2, FX3 respectively | Select next effect in the corresponding slot |
+| Knob 1 | Set Wet/Dry for all three slots together | Same |
+| Knobs 2, 3, 4 | Set FX1, FX2, FX3 parameter respectively | Same |
+
+Button 1 inverts each slot&#x27;s existing state. If some slots start on and others off, they remain different after the macro. Its light represents FX1 only, because a single button cannot display all three states.
+
+## Pad banks
+
+Pads are numbered across the top row **1–4**, then across the bottom row **5–8**. Each deck has its own bank selection. Press HOTCUES, STEMS, PATTERN, or FLUX LOOP to choose a bank.
+
+| Bank | Pads 1–4 | Pads 5–8 | With SHIFT |
+|---|---|---|---|
+| HOTCUES | Set/jump to cues 1–4 | Set/jump to cues 5–8 | Delete the corresponding cue |
+| STEMS | Toggle mute for four separated parts | Toggle solo for the same four parts | Top row toggles solo; bottom row toggles mute |
+| PATTERN | Trigger sampler slots 1–4 for this deck | Trigger sampler slots 5–8 for this deck | Stop the corresponding sample |
+| FLUX LOOP | Held bounce loops: 1/32, 1/16, 1/8, 1/4 beat | Held bounce loops: 1/2, 1, 2, 4 beats | Toggle persistent autoloops of the corresponding duration |
+
+STEMS addresses djay&#x27;s four-track Neural Mix channels in order **4, 3, 2, 1** from left to right. The audible parts depend on djay&#x27;s selected separation layout; use its panel to identify each part. Solo is a toggle: press again to restore the other parts. The normal EQ knobs keep their EQ functions.
+
+PATTERN is an adaptation to djay&#x27;s sampler, not a recreation of Traktor&#x27;s step sequencer. A sampler slot must contain a sound. Playback follows djay&#x27;s sample hold setting. SHIFT + HOTCUE deletes a cue, so use a test track when learning that gesture.
+
+## Mixer and channel FX
+
+| Control | Action |
+|---|---|
+| GAIN, HIGH, MID, LOW | Own deck&#x27;s gain and normal three-band EQ |
+| Channel volume fader | Own channel&#x27;s volume |
+| Crossfader | Blend deck A/B |
+| MAIN | Main output level |
+| Headphone button | Toggle preview of that deck |
+| CUE MIX / CUE VOL | Headphone main/preview blend and headphone level |
+| Channel FX assignment buttons 1/2 | Toggle that deck&#x27;s FX1/FX2 slots |
+| MIC | Toggle microphone activation in djay; audio input setup is separate |
+
+The global **FILTER / FX1 / FX2 / FX3 / FX4** selector determines what each channel&#x27;s large effect knob and round FX ON button control. These round ON buttons are above the channel headphone buttons.
+
+| Selected mode | Channel amount knob | Channel FX ON button |
+|---|---|---|
+| FILTER | Filter | Filter kill/active toggle |
+| FX1 | FX1 Wet/Dry | Toggle FX1 |
+| FX2 | FX2 Wet/Dry | Toggle FX2 |
+| FX3 | FX3 Wet/Dry | Toggle FX3 |
+| FX4 | Filter fallback | Instant FX4, following djay&#x27;s HOLD setting |
+
+For momentary FX4, turn **HOLD off inside djay**. Hold the round channel FX ON button to apply the effect; release it to stop. A short press then does not latch it. There is no mapped continuous instant-FX4 parameter: the amount knob deliberately retains the filter. The channel assignment buttons are a djay adaptation of Traktor&#x27;s global FX-unit assignments.
+
+## Lights
+
+| Light | Meaning |
+|---|---|
+| PLAY and headphone buttons | djay&#x27;s current playback/monitor selection |
+| Pad-mode buttons | Selected bank on that side |
+| HOTCUES pads | Blue, with state brightness; individual djay cue colors are not copied |
+| STEMS pads | Four part colors, with state brightness |
+| PATTERN pads | Orange, with state brightness |
+| FLUX LOOP pads | Green, with state brightness |
+| Channel meters | djay&#x27;s deck meter feedback |
+| Under-deck shell | Blue normally, green for an active loop, blinking red near track end |
+
+Colors are choices made by this bridge. Meter segments reproduce djay&#x27;s reported level; exact ballistics and clipping behavior are not claimed to match Traktor. The main clip light has no implemented clip feed. Internal native button ID 82 remains unidentified and unmapped.
+
+### Seeing GAIN and MAIN in djay
+
+GAIN changes the level of its own deck. djay can keep hardware gain independent of the on-screen gain knob, so a stationary on-screen knob does not by itself mean the mapping failed. Check the audible level and channel meter. Algoriddim documents this behavior: https://community.algoriddim.com/t/gain-via-midi-doesn-t-move-on-screen/34747
+
+MAIN controls the main mix output, not a deck selected for headphone CUE preview. Open the speaker icon in djay’s top toolbar to see Main Volume. Use CUE VOL for headphone level. MAIN was physically checked from minimum to midpoint; djay’s Main Volume slider followed to about 49%.
+</pre></details><details><summary>Tested features and limitations</summary><pre># Validation and limitations
+
+This document records the scope of the integration, rather than a claim that every machine or combination is supported.
+
+## Hardware-tested development setup
+
+- macOS, with a Native Instruments Traktor MX2 connected by USB.
+- djay Pro 5.6.9.
+- Native HID bridge, virtual MIDI endpoint `MX2 for djay`, mapping `Traktor MX2 - Native RGB`.
+- 293 control action rows preserved from the calibrated mapping, plus two deck-meter and two end-warning outputs.
+- The visual calibration recorded 116 distinct controls, with no duplicate physical MIDI addresses.
+
+The following checks were confirmed by the operator on both decks unless a narrower scope is stated:
+
+| Family | Confirmed behavior |
+|---|---|
+| Transport | PLAY/CUE operate their own deck; SYNC works with roles reversed |
+| Jogs | Touch, rotate, release, direction/speed and SHIFT seek; native input check confirmed operation |
+| Mixer | Own-channel volume, normal EQ, crossfader; gain audibly changes the correct track |
+| Tempo | Both faders change the owning BPM progressively and return to original tempo at center |
+| Library | BROWSE selection and press-to-load on the owning paused deck |
+| Headphones | Manual A-only/B-only preview and corresponding lights; main channels 1–2 and preview 3–4 |
+| HOTCUES | All eight pads create/return to cues; SHIFT clear tested with one disposable cue per deck |
+| STEMS | All eight mute/solo pads; second press restores the part or full mix |
+| PATTERN | All eight occupied sample slots; SHIFT stop tested with one sample per deck |
+| FLUX LOOP | All eight held durations release correctly; SHIFT persistent one-beat loop tested on pad 6 |
+| Deck FX | Slot buttons/parameters for FX1–FX3 and SHIFT next-effect selection |
+| Mixer FX | FILTER, FX1–FX3 enable/Wet-Dry routing independently on each channel |
+| FX4 | Operator found that djay HOLD must be off for apply-while-held/release-to-stop behavior |
+| Loop encoders | SIZE/autoloop behavior; isolated SHIFT + left encoder tests confirm moving a loop without changing duration on A and B; SHIFT + right rotation changes beatjump interval |
+| RGB/feedback | Playback/headphone/mode states, mode-colored pads, moving meters, green loop shell, red end warning and return to blue independently on both sides |
+| USB reconnect | Controls/lights recover while bridge and djay remain open; some knobs need repositioning |
+| djay restart | Controls, jogs, and lights recover without reselecting mapping while bridge remains open |
+
+The original development suite had 38 passing software checks for mapping contracts, decoding, routing, releases, feedback, and transport behavior. This historical count is not the current release test count; use the release build report for new packaging and platform checks. Automated tests cannot replace controller, audio, or app routing checks.
+
+## MIDI mode in Companion 0.5.0
+
+The previously validated CoreMIDI bridge and 293-row Visual Complete mapping are selectable in the Mac app. The packaged MIDI transport self-test and bridge lifecycle have automated checks. Physical controller and djay routing in this new packaged version still need a manual recheck; the historical MIDI mapping validation does not prove the packaged app on every Mac. Native mode remains available.
+
+## Known limits
+
+- Windows has not been physically tested. Supplying Windows source/build support does not establish working djay routing, HID permissions, RGB feedback, audio drivers, or installation.
+- A single macOS test setup does not establish compatibility with every Mac architecture, OS version, or newer djay release. Inspect the build&#x27;s architecture and deployment target.
+- Some secondary actions and SHIFT variants remain implemented but not individually exercised: library shortcuts, loop in/out, key/master/quantize/slip/reverse variants, all-FX macros, channel FX assignment buttons, microphone, and all eight shifted-pad variants.
+- Gain was audibly confirmed on its own deck. djay documents that hardware and on-screen gain can be independent; a stationary on-screen knob alone is not a mapping failure.
+- Individual hotcue colors are not implemented. Pads indicate their bank and state using the bridge&#x27;s palette.
+- The bridge uses 7-bit MIDI control values after decoding HID; it does not preserve full native analog resolution through djay.
+- No pickup/soft takeover is implemented in the bridge. Potentiometers can need repositioning after reconnect.
+- PATTERN is djay sampler playback, not Traktor&#x27;s step sequencer. FX4 amount is a filter fallback, not a continuous instant-effect parameter.
+- The main clip light has no validated feedback source. Internal button 82 is unidentified and unmapped.
+- djay features depend on the user&#x27;s installed version and available functionality. Audio routing and microphone input settings are configured in djay, not by the mapping.
+
+## Windows release gate
+
+Before calling a Windows build supported, test and record:
+
+1. Installation/launch on a clean Windows machine, including the required MIDI and audio drivers.
+2. Native HID access to the correct MX2 interface without changing or replacing its audio/MIDI driver.
+3. A single loopMIDI bus named exactly `MX2 for djay`, exposing matching input/output names. Confirm djay actually delivers feedback through this virtual bus. The Windows-specific mapping reserves channels 10–14 (zero-based) for feedback, separate from input channels 0–9 and 15; confirm that the transport ignores echoed input messages and no feedback retriggers controls.
+4. Mapping import and selection, and prevention of duplicate input from the raw MX2 endpoint.
+5. Bilateral PLAY/CUE, jog touch/release and speed/direction, analog endpoints, SHIFT independence, held-pad release, all pad banks, effects, and audio preview.
+6. Meter and end-warning feedback, RGB bank colors, loop lights, and no MIDI feedback loop.
+7. USB reconnect, djay restart, app Stop/Start, and a second-launch attempt, with no stuck notes or duplicated ports.
+
+## Recheck a shared release
+
+On a recipient&#x27;s machine, start with paused tracks and a moderate volume. Check PLAY/CUE on A/B, scratch touch/release, headphone preview, and one held loop per deck before a longer session. Check reconnect and restart recovery. Report the app version, operating system, djay version, selected mapping and port names, plus the exact control/gesture and observed result. Share diagnostics only after reviewing them; personal session logs are not part of the distribution archive.
+
+## Version0.2 desktop interface and passive monitor
+
+The integrated MX2 Companion window, new icon, guided setup and offline 116-control atlas have been observed on the development Mac. Native mode is confirmed inside the app while the bridge is stopped. A real CoreMIDI inventory test showed zero extra virtual sources with the passive observer alone, one source with the bridge running alongside it, and zero sources after shutdown. The integrated Start action reached ready/native state with djay feedback and zero decoder errors.
+
+The full development suite passes 78 checks, and the curated source suite passes 60. MIDI mode was observed in the app after the physical mode toggle, and the user confirmed Native mode after switching back. Monitoring remained active while the bridge was stopped. Windows remains unverified.
+
+## Companion 0.3 regression checks
+
+The new compact desktop window was opened on the development Mac. The native bridge reached ready state with feedback and zero decoder errors. Clicking Mapping installed returned an already-installed message without opening djay or importing another copy. Status continued refreshing after that action. The full development suite passes 78 tests; the curated source suite passes 60.
+
+A user reported crossfader movement during touched jog rotation after mapping import. A passive CoreMIDI capture observed 941 virtual jog CC messages and no crossfader CC messages during the gesture. Crossfader Cutting Mode was confirmed disabled in persisted djay preferences, and a new mapping identity with identical bindings did not resolve the report. The user confirmed the central crossfader was affected. After quitting and reopening djay with Companion kept running, the user confirmed that the crossfader remained stable during touched jog rotation. Restarting djay cleared the observed issue; the exact internal cause is not established. First-import guidance now includes that restart.
+
+## GAIN and MAIN follow-up, 18 October 2026
+
+The physical MAIN knob was swept from minimum to midpoint. Native ADC values 3–1999 decoded to virtual channel 16 CC 32 values 0–62. The Main Volume slider in djay 5.6.9 reached 0.488188982 (62/127), confirming that the physical control reaches the software master. The user subsequently reported that everything was fine; the exact listening output was not specified. Headphone CUE preview is a separate route.
+</pre></details></html>

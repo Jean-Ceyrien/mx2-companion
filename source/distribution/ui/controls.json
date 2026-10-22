@@ -1,0 +1,2036 @@
+{
+  "version": 1,
+  "image": {
+    "file": "mx2.png",
+    "width": 1280,
+    "height": 720,
+    "source": "https://www.native-instruments.com/products/traktor-mx2",
+    "attribution": "Controller photograph: Native Instruments. Hotspots and djay assignments: MX2 for djay community integration."
+  },
+  "controls": [
+    {
+      "id": "left.play",
+      "label": "PLAY",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Play / pause",
+      "shift": "Return to start cue and pause",
+      "notes": "",
+      "position": {
+        "x": 222,
+        "y": 608,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "left.cue",
+      "label": "CUE",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Set / return to main cue, according to playback state",
+      "shift": "Jump to beginning of track",
+      "notes": "",
+      "position": {
+        "x": 222,
+        "y": 546,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "right.play",
+      "label": "PLAY",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Play / pause",
+      "shift": "Return to start cue and pause",
+      "notes": "",
+      "position": {
+        "x": 786,
+        "y": 608,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "right.cue",
+      "label": "CUE",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Set / return to main cue, according to playback state",
+      "shift": "Jump to beginning of track",
+      "notes": "",
+      "position": {
+        "x": 786,
+        "y": 546,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "left.jogwheel.touch",
+      "label": "JOG TOUCH",
+      "deck": "A",
+      "category": "Jogs",
+      "gesture": "Touch / release",
+      "normal": "In TT mode, touch engages scratching; release ends scratching",
+      "shift": "Touch does not acquire scratch mode while SHIFT is held",
+      "notes": "",
+      "position": {
+        "x": 356,
+        "y": 334,
+        "shape": "touch",
+        "size": 110
+      }
+    },
+    {
+      "id": "right.jogwheel.touch",
+      "label": "JOG TOUCH",
+      "deck": "B",
+      "category": "Jogs",
+      "gesture": "Touch / release",
+      "normal": "In TT mode, touch engages scratching; release ends scratching",
+      "shift": "Touch does not acquire scratch mode while SHIFT is held",
+      "notes": "",
+      "position": {
+        "x": 920,
+        "y": 334,
+        "shape": "touch",
+        "size": 110
+      }
+    },
+    {
+      "id": "left.jogwheel",
+      "label": "JOG WHEEL",
+      "deck": "A",
+      "category": "Jogs",
+      "gesture": "Rotate",
+      "normal": "In TT mode, touched platter scratches; otherwise rotate to move / nudge",
+      "shift": "Seek through the track",
+      "notes": "",
+      "position": {
+        "x": 356,
+        "y": 334,
+        "shape": "rim",
+        "size": 141
+      }
+    },
+    {
+      "id": "right.jogwheel",
+      "label": "JOG WHEEL",
+      "deck": "B",
+      "category": "Jogs",
+      "gesture": "Rotate",
+      "normal": "In TT mode, touched platter scratches; otherwise rotate to move / nudge",
+      "shift": "Seek through the track",
+      "notes": "",
+      "position": {
+        "x": 920,
+        "y": 334,
+        "shape": "rim",
+        "size": 141
+      }
+    },
+    {
+      "id": "left.pitch.fader",
+      "label": "TEMPO",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Move",
+      "normal": "Change deck tempo",
+      "shift": "Change deck tempo",
+      "notes": "",
+      "position": {
+        "x": 494,
+        "y": 574,
+        "shape": "rect",
+        "size": [
+          28,
+          133
+        ]
+      }
+    },
+    {
+      "id": "right.pitch.fader",
+      "label": "TEMPO",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Move",
+      "normal": "Change deck tempo",
+      "shift": "Change deck tempo",
+      "notes": "",
+      "position": {
+        "x": 1058,
+        "y": 574,
+        "shape": "rect",
+        "size": [
+          28,
+          133
+        ]
+      }
+    },
+    {
+      "id": "left.fx.knobs.1",
+      "label": "FX knob 1",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Set Wet/Dry of all three FX slots together",
+      "shift": "Set Wet/Dry of all three FX slots together",
+      "notes": "The three-slot enable macro inverts each current state; its light represents FX1 only. The knob controls all three Wet/Dry values.",
+      "position": {
+        "x": 222,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "left.fx.knobs.2",
+      "label": "FX knob 2",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Change FX1 parameter",
+      "shift": "Change FX1 parameter",
+      "notes": "",
+      "position": {
+        "x": 276,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "left.fx.knobs.3",
+      "label": "FX knob 3",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Change FX2 parameter",
+      "shift": "Change FX2 parameter",
+      "notes": "",
+      "position": {
+        "x": 330,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "left.fx.knobs.4",
+      "label": "FX knob 4",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Change FX3 parameter",
+      "shift": "Change FX3 parameter",
+      "notes": "",
+      "position": {
+        "x": 384,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "mixer.channels.1.channel_fx.amount",
+      "label": "CHANNEL FX AMOUNT",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "FILTER: filter. FX1–3: selected slot Wet/Dry. FX4: filter fallback.",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 575,
+        "y": 355,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.1.eq.high",
+      "label": "HIGH",
+      "deck": "A",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck A high EQ",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 575,
+        "y": 191,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.1.eq.low",
+      "label": "LOW",
+      "deck": "A",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck A low EQ",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 575,
+        "y": 300,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.1.eq.mid",
+      "label": "MID",
+      "deck": "A",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck A mid EQ",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 575,
+        "y": 245,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.1.gain",
+      "label": "GAIN",
+      "deck": "A",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck A gain",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "djay can keep hardware gain separate from the on-screen gain control. Listen to the level and watch the channel meter; the on-screen knob may stay still. This behavior is documented by Algoriddim.",
+      "position": {
+        "x": 575,
+        "y": 103,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.1.volume",
+      "label": "CHANNEL VOLUME",
+      "deck": "A",
+      "category": "Mixer",
+      "gesture": "Move",
+      "normal": "Adjust channel A volume",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 575,
+        "y": 533,
+        "shape": "rect",
+        "size": [
+          29,
+          106
+        ]
+      }
+    },
+    {
+      "id": "mixer.channels.2.channel_fx.amount",
+      "label": "CHANNEL FX AMOUNT",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "FILTER: filter. FX1–3: selected slot Wet/Dry. FX4: filter fallback.",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 704,
+        "y": 355,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.2.eq.high",
+      "label": "HIGH",
+      "deck": "B",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck B high EQ",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 704,
+        "y": 191,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.2.eq.low",
+      "label": "LOW",
+      "deck": "B",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck B low EQ",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 704,
+        "y": 300,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.2.eq.mid",
+      "label": "MID",
+      "deck": "B",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck B mid EQ",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 704,
+        "y": 245,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.2.gain",
+      "label": "GAIN",
+      "deck": "B",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust deck B gain",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "djay can keep hardware gain separate from the on-screen gain control. Listen to the level and watch the channel meter; the on-screen knob may stay still. This behavior is documented by Algoriddim.",
+      "position": {
+        "x": 704,
+        "y": 103,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.channels.2.volume",
+      "label": "CHANNEL VOLUME",
+      "deck": "B",
+      "category": "Mixer",
+      "gesture": "Move",
+      "normal": "Adjust channel B volume",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 704,
+        "y": 533,
+        "shape": "rect",
+        "size": [
+          29,
+          106
+        ]
+      }
+    },
+    {
+      "id": "mixer.cue_mix",
+      "label": "CUE MIX",
+      "deck": "Mixer",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Blend headphone cue and main output",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 639,
+        "y": 245,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.cue_vol",
+      "label": "CUE VOL",
+      "deck": "Mixer",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust headphone level",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 639,
+        "y": 300,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.main.volume",
+      "label": "MAIN",
+      "deck": "Mixer",
+      "category": "Mixer",
+      "gesture": "Rotate",
+      "normal": "Adjust main output level",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Controls the main mix output, not headphone CUE preview. In djay, open the speaker icon in the top toolbar to see Main Volume. Use CUE VOL for headphones.",
+      "position": {
+        "x": 639,
+        "y": 103,
+        "shape": "circle",
+        "size": 21
+      }
+    },
+    {
+      "id": "mixer.xfader",
+      "label": "CROSSFADER",
+      "deck": "Mixer",
+      "category": "Mixer",
+      "gesture": "Move",
+      "normal": "Blend channel A and channel B",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 639,
+        "y": 619,
+        "shape": "rect",
+        "size": [
+          92,
+          28
+        ]
+      }
+    },
+    {
+      "id": "right.fx.knobs.1",
+      "label": "FX knob 1",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Set Wet/Dry of all three FX slots together",
+      "shift": "Set Wet/Dry of all three FX slots together",
+      "notes": "The three-slot enable macro inverts each current state; its light represents FX1 only. The knob controls all three Wet/Dry values.",
+      "position": {
+        "x": 786,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "right.fx.knobs.2",
+      "label": "FX knob 2",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Change FX1 parameter",
+      "shift": "Change FX1 parameter",
+      "notes": "",
+      "position": {
+        "x": 840,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "right.fx.knobs.3",
+      "label": "FX knob 3",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Change FX2 parameter",
+      "shift": "Change FX2 parameter",
+      "notes": "",
+      "position": {
+        "x": 894,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "right.fx.knobs.4",
+      "label": "FX knob 4",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Rotate",
+      "normal": "Change FX3 parameter",
+      "shift": "Change FX3 parameter",
+      "notes": "",
+      "position": {
+        "x": 948,
+        "y": 103,
+        "shape": "circle",
+        "size": 20
+      }
+    },
+    {
+      "id": "left.browse.add_to_list",
+      "label": "PREPARATION",
+      "deck": "A",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Mark selected songs",
+      "shift": "Unmark selected songs",
+      "notes": "",
+      "position": {
+        "x": 494,
+        "y": 94,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.browse.encoder",
+      "label": "BROWSE",
+      "deck": "A",
+      "category": "Library",
+      "gesture": "Rotate",
+      "normal": "Select tracks in the library",
+      "shift": "Select library sources",
+      "notes": "",
+      "position": {
+        "x": 480,
+        "y": 135,
+        "shape": "circle",
+        "size": 24
+      }
+    },
+    {
+      "id": "left.browse.encoder.push",
+      "label": "BROWSE",
+      "deck": "A",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Load selected track onto this deck",
+      "shift": "Load selected track without instant double",
+      "notes": "",
+      "position": {
+        "x": 480,
+        "y": 135,
+        "shape": "circle",
+        "size": 11
+      }
+    },
+    {
+      "id": "left.browse.favorite",
+      "label": "FAVORITE",
+      "deck": "A",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Focus library queue",
+      "shift": "Focus library sources",
+      "notes": "",
+      "position": {
+        "x": 465,
+        "y": 94,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.browse.preview",
+      "label": "PREVIEW",
+      "deck": "A",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Toggle library preview",
+      "shift": "Toggle library preview",
+      "notes": "",
+      "position": {
+        "x": 465,
+        "y": 181,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.browse.view",
+      "label": "VIEW",
+      "deck": "A",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Show / hide the library",
+      "shift": "Show / hide the library",
+      "notes": "",
+      "position": {
+        "x": 494,
+        "y": 181,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.flux",
+      "label": "FLUX",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Toggle slip mode",
+      "shift": "Toggle slip mode",
+      "notes": "",
+      "position": {
+        "x": 232,
+        "y": 223,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "left.flux_loop",
+      "label": "FLUX LOOP",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the FLUX LOOP pad bank on deck A",
+      "shift": "Select the FLUX LOOP pad bank on deck A",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 428,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.fx.buttons.1",
+      "label": "FX button 1",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle each of the three FX slots",
+      "shift": "Toggle overall deck FX",
+      "notes": "The three-slot enable macro inverts each current state; its light represents FX1 only. The knob controls all three Wet/Dry values.",
+      "position": {
+        "x": 222,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "left.fx.buttons.2",
+      "label": "FX button 2",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle FX1",
+      "shift": "Select next effect in FX1",
+      "notes": "",
+      "position": {
+        "x": 276,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "left.fx.buttons.3",
+      "label": "FX button 3",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle FX2",
+      "shift": "Select next effect in FX2",
+      "notes": "",
+      "position": {
+        "x": 330,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "left.fx.buttons.4",
+      "label": "FX button 4",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle FX3",
+      "shift": "Select next effect in FX3",
+      "notes": "",
+      "position": {
+        "x": 384,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "left.hotcues",
+      "label": "HOTCUES",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the HOTCUES pad bank on deck A",
+      "shift": "Select the HOTCUES pad bank on deck A",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 288,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.key_lock",
+      "label": "KEY LOCK",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Toggle key lock",
+      "shift": "Match key",
+      "notes": "",
+      "position": {
+        "x": 356,
+        "y": 509,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.loop_move",
+      "label": "MOVE · left encoder",
+      "deck": "A",
+      "category": "Loops",
+      "gesture": "Rotate",
+      "normal": "Beatjump backward / forward",
+      "shift": "Move an active loop without changing its duration",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 288,
+        "y": 509,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "left.loop_move.push",
+      "label": "MOVE · left encoder",
+      "deck": "A",
+      "category": "Loops",
+      "gesture": "Press",
+      "normal": "Loop in / out action",
+      "shift": "Loop in / out action",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 288,
+        "y": 509,
+        "shape": "circle",
+        "size": 10
+      }
+    },
+    {
+      "id": "left.loop_size",
+      "label": "SIZE · right encoder",
+      "deck": "A",
+      "category": "Loops",
+      "gesture": "Rotate",
+      "normal": "Change autoloop duration",
+      "shift": "Change beatjump distance used by MOVE",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 427,
+        "y": 509,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "left.loop_size.push",
+      "label": "SIZE · right encoder",
+      "deck": "A",
+      "category": "Loops",
+      "gesture": "Press",
+      "normal": "Activate / deactivate autoloop",
+      "shift": "Activate / deactivate autoloop",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 427,
+        "y": 509,
+        "shape": "circle",
+        "size": 10
+      }
+    },
+    {
+      "id": "left.master",
+      "label": "MASTER",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Make this deck tempo master",
+      "shift": "Reset tempo",
+      "notes": "",
+      "position": {
+        "x": 508,
+        "y": 480,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.mode.jogwheel",
+      "label": "JOG",
+      "deck": "A",
+      "category": "Jogs",
+      "gesture": "Press",
+      "normal": "Select jog mode; scratch touch is disabled",
+      "shift": "Select jog mode",
+      "notes": "",
+      "position": {
+        "x": 507,
+        "y": 256,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "left.mode.turntable",
+      "label": "TT",
+      "deck": "A",
+      "category": "Jogs",
+      "gesture": "Press",
+      "normal": "Select touch-sensitive scratch mode",
+      "shift": "Select touch-sensitive scratch mode",
+      "notes": "",
+      "position": {
+        "x": 480,
+        "y": 222,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "left.pads.1",
+      "label": "PAD 1",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 1 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 288,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pads.2",
+      "label": "PAD 2",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 2 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 334,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pads.3",
+      "label": "PAD 3",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 3 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 381,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pads.4",
+      "label": "PAD 4",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 4 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 428,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pads.5",
+      "label": "PAD 5",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 1 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 288,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pads.6",
+      "label": "PAD 6",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 2 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 334,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pads.7",
+      "label": "PAD 7",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 3 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 381,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pads.8",
+      "label": "PAD 8",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 4 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 428,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "left.pattern",
+      "label": "PATTERN",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the PATTERN pad bank on deck A",
+      "shift": "Select the PATTERN pad bank on deck A",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 381,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.reverse",
+      "label": "REVERSE",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Hold / release",
+      "normal": "Censor / reverse while held",
+      "shift": "Toggle reverse",
+      "notes": "",
+      "position": {
+        "x": 210,
+        "y": 256,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "left.shift",
+      "label": "SHIFT",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Hold",
+      "normal": "Use the shifted action of another control on this side",
+      "shift": "Never press both SHIFT buttons together during a session: this switches hardware mode.",
+      "notes": "",
+      "position": {
+        "x": 222,
+        "y": 480,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.stems",
+      "label": "STEMS",
+      "deck": "A",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the STEMS pad bank on deck A",
+      "shift": "Select the STEMS pad bank on deck A",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 334,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "left.sync",
+      "label": "SYNC",
+      "deck": "A",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Synchronize tempo and beats",
+      "shift": "Toggle quantize",
+      "notes": "",
+      "position": {
+        "x": 478,
+        "y": 480,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "mixer.channel_fx.filter",
+      "label": "SELECT FILTER",
+      "deck": "Mixer",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Route both channel FX amount knobs and ON buttons to FILTER",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Selection is shared by both channels; each amount/ON control still affects its own deck. FX4 amount is a filter fallback.",
+      "position": {
+        "x": 639,
+        "y": 405,
+        "shape": "rect",
+        "size": [
+          43,
+          18
+        ]
+      }
+    },
+    {
+      "id": "mixer.channel_fx.fx1",
+      "label": "SELECT FX1",
+      "deck": "Mixer",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Route both channel FX amount knobs and ON buttons to FX1",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Selection is shared by both channels; each amount/ON control still affects its own deck. FX4 amount is a filter fallback.",
+      "position": {
+        "x": 627,
+        "y": 355,
+        "shape": "rect",
+        "size": [
+          22,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.channel_fx.fx2",
+      "label": "SELECT FX2",
+      "deck": "Mixer",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Route both channel FX amount knobs and ON buttons to FX2",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Selection is shared by both channels; each amount/ON control still affects its own deck. FX4 amount is a filter fallback.",
+      "position": {
+        "x": 652,
+        "y": 355,
+        "shape": "rect",
+        "size": [
+          22,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.channel_fx.fx3",
+      "label": "SELECT FX3",
+      "deck": "Mixer",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Route both channel FX amount knobs and ON buttons to FX3",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Selection is shared by both channels; each amount/ON control still affects its own deck. FX4 amount is a filter fallback.",
+      "position": {
+        "x": 627,
+        "y": 380,
+        "shape": "rect",
+        "size": [
+          22,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.channel_fx.fx4",
+      "label": "SELECT FX4",
+      "deck": "Mixer",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Route both channel FX amount knobs and ON buttons to FX4",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Selection is shared by both channels; each amount/ON control still affects its own deck. FX4 amount is a filter fallback.",
+      "position": {
+        "x": 652,
+        "y": 380,
+        "shape": "rect",
+        "size": [
+          22,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.channels.1.channel_fx.on",
+      "label": "CHANNEL FX ON",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Press / hold / release",
+      "normal": "FILTER: filter kill/active toggle. FX1–3: toggle selected slot. FX4: instant FX4.",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Round button above the headphone button. For momentary FX4 turn HOLD off inside djay: hold applies; release stops. The amount knob stays a filter in FX4 mode.",
+      "position": {
+        "x": 575,
+        "y": 400,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "mixer.channels.1.cue",
+      "label": "HEADPHONE CUE",
+      "deck": "A",
+      "category": "Mixer",
+      "gesture": "Press",
+      "normal": "Toggle headphone preview of deck A",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Use monitor channels 3–4, automatic selection off, and CUE MIX toward CUE for manual preview.",
+      "position": {
+        "x": 575,
+        "y": 448,
+        "shape": "rect",
+        "size": [
+          36,
+          20
+        ]
+      }
+    },
+    {
+      "id": "mixer.channels.1.deck_fx_assign.1",
+      "label": "FX ASSIGN 1",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle deck A FX1",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Adapted to djay per-deck FX slots, rather than Traktor’s global FX units.",
+      "position": {
+        "x": 563,
+        "y": 149,
+        "shape": "rect",
+        "size": [
+          21,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.channels.1.deck_fx_assign.2",
+      "label": "FX ASSIGN 2",
+      "deck": "A",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle deck A FX2",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Adapted to djay per-deck FX slots, rather than Traktor’s global FX units.",
+      "position": {
+        "x": 587,
+        "y": 149,
+        "shape": "rect",
+        "size": [
+          21,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.channels.2.channel_fx.on",
+      "label": "CHANNEL FX ON",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Press / hold / release",
+      "normal": "FILTER: filter kill/active toggle. FX1–3: toggle selected slot. FX4: instant FX4.",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Round button above the headphone button. For momentary FX4 turn HOLD off inside djay: hold applies; release stops. The amount knob stays a filter in FX4 mode.",
+      "position": {
+        "x": 704,
+        "y": 400,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "mixer.channels.2.cue",
+      "label": "HEADPHONE CUE",
+      "deck": "B",
+      "category": "Mixer",
+      "gesture": "Press",
+      "normal": "Toggle headphone preview of deck B",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Use monitor channels 3–4, automatic selection off, and CUE MIX toward CUE for manual preview.",
+      "position": {
+        "x": 704,
+        "y": 448,
+        "shape": "rect",
+        "size": [
+          36,
+          20
+        ]
+      }
+    },
+    {
+      "id": "mixer.channels.2.deck_fx_assign.1",
+      "label": "FX ASSIGN 1",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle deck B FX1",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Adapted to djay per-deck FX slots, rather than Traktor’s global FX units.",
+      "position": {
+        "x": 692,
+        "y": 149,
+        "shape": "rect",
+        "size": [
+          21,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.channels.2.deck_fx_assign.2",
+      "label": "FX ASSIGN 2",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle deck B FX2",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "Adapted to djay per-deck FX slots, rather than Traktor’s global FX units.",
+      "position": {
+        "x": 716,
+        "y": 149,
+        "shape": "rect",
+        "size": [
+          21,
+          19
+        ]
+      }
+    },
+    {
+      "id": "mixer.mic",
+      "label": "MIC",
+      "deck": "Mixer",
+      "category": "Mixer",
+      "gesture": "Press",
+      "normal": "Toggle microphone activation in djay; set audio input separately",
+      "shift": "Same as normal; mixer controls ignore deck SHIFT",
+      "notes": "",
+      "position": {
+        "x": 639,
+        "y": 448,
+        "shape": "circle",
+        "size": 17
+      }
+    },
+    {
+      "id": "right.browse.add_to_list",
+      "label": "PREPARATION",
+      "deck": "B",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Mark selected songs",
+      "shift": "Unmark selected songs",
+      "notes": "",
+      "position": {
+        "x": 1058,
+        "y": 94,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.browse.encoder",
+      "label": "BROWSE",
+      "deck": "B",
+      "category": "Library",
+      "gesture": "Rotate",
+      "normal": "Select tracks in the library",
+      "shift": "Select library sources",
+      "notes": "",
+      "position": {
+        "x": 1044,
+        "y": 135,
+        "shape": "circle",
+        "size": 24
+      }
+    },
+    {
+      "id": "right.browse.encoder.push",
+      "label": "BROWSE",
+      "deck": "B",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Load selected track onto this deck",
+      "shift": "Load selected track without instant double",
+      "notes": "",
+      "position": {
+        "x": 1044,
+        "y": 135,
+        "shape": "circle",
+        "size": 11
+      }
+    },
+    {
+      "id": "right.browse.favorite",
+      "label": "FAVORITE",
+      "deck": "B",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Focus library queue",
+      "shift": "Focus library sources",
+      "notes": "",
+      "position": {
+        "x": 1029,
+        "y": 94,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.browse.preview",
+      "label": "PREVIEW",
+      "deck": "B",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Toggle library preview",
+      "shift": "Toggle library preview",
+      "notes": "",
+      "position": {
+        "x": 1029,
+        "y": 181,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.browse.view",
+      "label": "VIEW",
+      "deck": "B",
+      "category": "Library",
+      "gesture": "Press",
+      "normal": "Show / hide the library",
+      "shift": "Show / hide the library",
+      "notes": "",
+      "position": {
+        "x": 1058,
+        "y": 181,
+        "shape": "rect",
+        "size": [
+          24,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.flux",
+      "label": "FLUX",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Toggle slip mode",
+      "shift": "Toggle slip mode",
+      "notes": "",
+      "position": {
+        "x": 796,
+        "y": 223,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "right.flux_loop",
+      "label": "FLUX LOOP",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the FLUX LOOP pad bank on deck B",
+      "shift": "Select the FLUX LOOP pad bank on deck B",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 992,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.fx.buttons.1",
+      "label": "FX button 1",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle each of the three FX slots",
+      "shift": "Toggle overall deck FX",
+      "notes": "The three-slot enable macro inverts each current state; its light represents FX1 only. The knob controls all three Wet/Dry values.",
+      "position": {
+        "x": 786,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "right.fx.buttons.2",
+      "label": "FX button 2",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle FX1",
+      "shift": "Select next effect in FX1",
+      "notes": "",
+      "position": {
+        "x": 840,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "right.fx.buttons.3",
+      "label": "FX button 3",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle FX2",
+      "shift": "Select next effect in FX2",
+      "notes": "",
+      "position": {
+        "x": 894,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "right.fx.buttons.4",
+      "label": "FX button 4",
+      "deck": "B",
+      "category": "Effects",
+      "gesture": "Press",
+      "normal": "Toggle FX3",
+      "shift": "Select next effect in FX3",
+      "notes": "",
+      "position": {
+        "x": 948,
+        "y": 150,
+        "shape": "circle",
+        "size": 18
+      }
+    },
+    {
+      "id": "right.hotcues",
+      "label": "HOTCUES",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the HOTCUES pad bank on deck B",
+      "shift": "Select the HOTCUES pad bank on deck B",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 852,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.key_lock",
+      "label": "KEY LOCK",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Toggle key lock",
+      "shift": "Match key",
+      "notes": "",
+      "position": {
+        "x": 920,
+        "y": 509,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.loop_move",
+      "label": "MOVE · left encoder",
+      "deck": "B",
+      "category": "Loops",
+      "gesture": "Rotate",
+      "normal": "Beatjump backward / forward",
+      "shift": "Move an active loop without changing its duration",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 852,
+        "y": 509,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "right.loop_move.push",
+      "label": "MOVE · left encoder",
+      "deck": "B",
+      "category": "Loops",
+      "gesture": "Press",
+      "normal": "Loop in / out action",
+      "shift": "Loop in / out action",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 852,
+        "y": 509,
+        "shape": "circle",
+        "size": 10
+      }
+    },
+    {
+      "id": "right.loop_size",
+      "label": "SIZE · right encoder",
+      "deck": "B",
+      "category": "Loops",
+      "gesture": "Rotate",
+      "normal": "Change autoloop duration",
+      "shift": "Change beatjump distance used by MOVE",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 991,
+        "y": 509,
+        "shape": "circle",
+        "size": 22
+      }
+    },
+    {
+      "id": "right.loop_size.push",
+      "label": "SIZE · right encoder",
+      "deck": "B",
+      "category": "Loops",
+      "gesture": "Press",
+      "normal": "Activate / deactivate autoloop",
+      "shift": "Activate / deactivate autoloop",
+      "notes": "Below the jog: MOVE is the left encoder; SIZE is the right. Rotation and pressing are separate gestures.",
+      "position": {
+        "x": 991,
+        "y": 509,
+        "shape": "circle",
+        "size": 10
+      }
+    },
+    {
+      "id": "right.master",
+      "label": "MASTER",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Make this deck tempo master",
+      "shift": "Reset tempo",
+      "notes": "",
+      "position": {
+        "x": 1072,
+        "y": 480,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.mode.jogwheel",
+      "label": "JOG",
+      "deck": "B",
+      "category": "Jogs",
+      "gesture": "Press",
+      "normal": "Select jog mode; scratch touch is disabled",
+      "shift": "Select jog mode",
+      "notes": "",
+      "position": {
+        "x": 1071,
+        "y": 256,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "right.mode.turntable",
+      "label": "TT",
+      "deck": "B",
+      "category": "Jogs",
+      "gesture": "Press",
+      "normal": "Select touch-sensitive scratch mode",
+      "shift": "Select touch-sensitive scratch mode",
+      "notes": "",
+      "position": {
+        "x": 1044,
+        "y": 222,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "right.pads.1",
+      "label": "PAD 1",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 1 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 852,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pads.2",
+      "label": "PAD 2",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 2 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 898,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pads.3",
+      "label": "PAD 3",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 3 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 945,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pads.4",
+      "label": "PAD 4",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Top row, position 4 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 992,
+        "y": 584,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pads.5",
+      "label": "PAD 5",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 1 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 852,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pads.6",
+      "label": "PAD 6",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 2 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 898,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pads.7",
+      "label": "PAD 7",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 3 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 945,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pads.8",
+      "label": "PAD 8",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press / hold / release",
+      "normal": "Action follows the selected pad bank",
+      "shift": "Shifted action follows the selected pad bank",
+      "notes": "Bottom row, position 4 from the left. Choose a pad bank above to see this pad’s exact action.",
+      "position": {
+        "x": 992,
+        "y": 618,
+        "shape": "rect",
+        "size": [
+          38,
+          25
+        ]
+      }
+    },
+    {
+      "id": "right.pattern",
+      "label": "PATTERN",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the PATTERN pad bank on deck B",
+      "shift": "Select the PATTERN pad bank on deck B",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 945,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.reverse",
+      "label": "REVERSE",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Hold / release",
+      "normal": "Censor / reverse while held",
+      "shift": "Toggle reverse",
+      "notes": "",
+      "position": {
+        "x": 774,
+        "y": 256,
+        "shape": "circle",
+        "size": 16
+      }
+    },
+    {
+      "id": "right.shift",
+      "label": "SHIFT",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Hold",
+      "normal": "Use the shifted action of another control on this side",
+      "shift": "Never press both SHIFT buttons together during a session: this switches hardware mode.",
+      "notes": "",
+      "position": {
+        "x": 786,
+        "y": 480,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.stems",
+      "label": "STEMS",
+      "deck": "B",
+      "category": "Pads",
+      "gesture": "Press",
+      "normal": "Select the STEMS pad bank on deck B",
+      "shift": "Select the STEMS pad bank on deck B",
+      "notes": "Each deck keeps its own pad-bank selection. PATTERN uses djay samples, not a Traktor step sequencer.",
+      "position": {
+        "x": 898,
+        "y": 549,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "id": "right.sync",
+      "label": "SYNC",
+      "deck": "B",
+      "category": "Transport",
+      "gesture": "Press",
+      "normal": "Synchronize tempo and beats",
+      "shift": "Toggle quantize",
+      "notes": "",
+      "position": {
+        "x": 1042,
+        "y": 480,
+        "shape": "rect",
+        "size": [
+          35,
+          20
+        ]
+      }
+    }
+  ]
+}

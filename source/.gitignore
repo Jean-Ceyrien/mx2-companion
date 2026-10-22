@@ -1,0 +1,11 @@
+.DS_Store
+.build-venv/
+build/
+release/
+__pycache__/
+*.pyc
+*.log
+evidence/*
+!evidence/midi-profile.json
+!evidence/native-protocol-map.json
+!evidence/djay-capabilities.json

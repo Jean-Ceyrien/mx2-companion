@@ -38,6 +38,78 @@ function selectRoute(name) {
 
 document.querySelectorAll('[data-route]').forEach(button => button.addEventListener('click', () => selectRoute(button.dataset.route)));
 
+const overviewGroups = {
+  decks: {
+    name: 'Playback & jogs', context: 'On each deck',
+    copy: 'PLAY, CUE and the tempo controls stay on their own deck. Use TT for touch-sensitive scratching, or JOG for movement without scratch touch.',
+    normal: 'Touch and turn the platter to scratch in TT mode. Release to resume; rotate without scratch touch to move or nudge.',
+    shift: 'Turn the jog to seek through the track. Hold the SHIFT button on that side only.',
+    link: 'View playback & jog mapping'
+  },
+  library: {
+    name: 'Browse & load', context: 'Beside each FX row',
+    copy: 'Find tracks, navigate sources and load onto the deck on that side. The nearby buttons handle queue focus, marking, preview and the library view.',
+    normal: 'Turn BROWSE to select a track. Press it to load the track onto this deck.',
+    shift: 'Turn BROWSE to select library sources. SHIFT + press loads without instant double.',
+    link: 'View library mapping'
+  },
+  loops: {
+    name: 'Loops & beatjump', context: 'Two encoders below each jog',
+    copy: 'MOVE is the left encoder; SIZE is the right. Turning an encoder and pressing it are separate actions.',
+    normal: 'Turn MOVE to beatjump; press for loop in/out. Turn SIZE to change loop length; press to toggle autoloop.',
+    shift: 'Turn MOVE to reposition an active loop. Turn SIZE to change the beatjump distance.',
+    link: 'View loop & beatjump mapping'
+  },
+  effects: {
+    name: 'Deck effects', context: 'Top row on each deck',
+    copy: 'The first button and knob act across three FX slots. The next three pairs address FX1, FX2 and FX3 individually.',
+    normal: 'Buttons toggle slot states; knobs adjust combined Wet/Dry or the individual slot parameter.',
+    shift: 'Button 1 toggles overall deck FX. Buttons 2–4 select the next effect in their own slot.',
+    link: 'View deck FX mapping'
+  },
+  pads: {
+    name: 'Performance pads', context: 'Eight pads on each deck',
+    copy: 'Choose HOTCUES, STEMS, PATTERN or FLUX LOOP independently on each side. Pad numbers run 1–4 across the top, then 5–8 below.',
+    normal: 'Jump to cues, mute or solo Neural Mix parts, trigger samples, or hold bounce loops from 1/32 to 4 beats.',
+    shift: 'Delete cues, swap stem mute/solo, stop samples, or toggle persistent loops, depending on the selected bank.',
+    link: 'View all four pad banks'
+  },
+  mixer: {
+    name: 'Mixer & monitoring', context: 'Centre section',
+    copy: 'Each channel has its own gain, EQ, level and headphone cue. The centre FX selector changes the channel effect knobs and ON buttons.',
+    normal: 'Mix deck A and B, adjust the main output, and set headphone preview with CUE MIX and CUE VOL.',
+    shift: 'Mixer controls keep their normal actions. Set main audio to channels 1–2 and headphones to 3–4 in djay.',
+    link: 'View mixer & channel FX mapping'
+  }
+};
+
+function selectOverview(name) {
+  const group = overviewGroups[name];
+  if (!group) return;
+  document.querySelectorAll('[data-overview]').forEach(button => {
+    const selected = button.dataset.overview === name;
+    button.classList.toggle('is-selected', selected);
+    button.setAttribute('aria-pressed', String(selected));
+  });
+  for (const field of ['name', 'context', 'copy', 'normal', 'shift']) {
+    document.getElementById('overview-' + field).textContent = group[field];
+  }
+  const link = document.getElementById('overview-read');
+  link.href = '#mapping-' + name;
+  link.textContent = group.link + ' ↗';
+}
+
+document.querySelectorAll('[data-overview]').forEach(button => {
+  button.addEventListener('click', () => selectOverview(button.dataset.overview));
+});
+
+document.getElementById('overview-read').addEventListener('click', event => {
+  const target = document.querySelector(event.currentTarget.getAttribute('href'));
+  if (!target) return;
+  target.open = true;
+  requestAnimationFrame(() => target.querySelector('summary').focus({preventScroll: true}));
+});
+
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const blocks = document.querySelectorAll('.section-intro, .route-picker, .route-content, .product-shot, .install-card, .question-list details, .closing, .footer-mark, .footer-links');
   const observer = new IntersectionObserver(entries => {
